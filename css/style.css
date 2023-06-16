@@ -1,0 +1,1124 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color : #daaf50 ;
+    --white-color : #fff ;
+    --black-color : #000 ;
+    --text-color : #656565 ;
+    --color : #3c373d ;
+    --main-color : #1e1c1f ;
+    --font-size : 16px  ;
+    --font-weight : 400 ;
+    --line-hight : 1.5 ;
+    --gutter-pedding : 15px ;
+    --font-stack : 'Lora' ;
+    --primary-font-stack : 'Poppins' ;
+}
+html, body{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: var(--white-color);
+    font-size: var(--font-size);
+    font-weight: var(--font-weight);
+    line-height: var(--line-hight);
+}
+img{
+    max-width: 100%;
+    display: block;
+}
+ul, li{
+    text-decoration: none;
+    list-style: none;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    margin: 0 auto;
+    padding-left: var(--gutter-padding);
+    padding-right: var(--gutter-padding);
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(--var(gutter-padding));
+    margin-right: calc(--var(gutter-padding));
+}
+.items-center{
+    align-items: center;
+}
+.justify{
+    justify-content: space-between;
+}
+.justify-center{
+    justify-content: center;
+}
+.w1{
+      width: 8.33%;
+}
+.w2{
+    width: 16.6666%;
+}
+.w3{
+    width: 25%;
+}
+.w4{
+    width: 33.33%;
+}
+.w5{
+    width: 41.6666%;
+}
+.w6{
+    width: 50%;
+}
+.w7{
+    width: 58.33%;
+}
+.w8{
+    width: 66.6666%;
+}
+.w9{
+    width: 75%;
+}
+.w10{
+    width: 83.33%;
+}
+.w11{
+    width: 91.6666%;
+}
+.w12{
+    width: 100%;
+}
+.w1, .w2, .w3, .w4, .w5, .w6, .w7, .w8, .w9, .w10, .w11, .w12{
+    padding-left: var(--gutter-padding);
+    padding-right: var(--gutter-padding);
+}
+/* header */
+header{
+    position: relative;
+    z-index: 9 ;
+}
+.logo{
+    align-items: center;
+    padding: 25px;
+    background-color: var(--main-color);
+    width: 198px;
+    text-align: center;
+}
+.logo a{
+    display: inline-block;
+}
+nav{
+    align-items: center;
+    display: flex;
+}
+nav ul{
+    margin-left: auto;
+    justify-content: flex-end;
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+}
+nav ul li a{
+    color: var(--white-color);
+    position: relative;
+    font-family: var(--primary-font-stack);
+    font-size: 15px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-left: 18px;
+}
+nav ul li> a::after{
+    background-color: var(--primary-color);
+    height: 1px;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    transition: all 0.3s;
+}
+nav ul li> a:hover{
+    content: '';
+    height: 0;
+    width: 0%;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    flex-direction: column;
+    box-shadow:  0px 5px 20px 0px rgb(0 0 0 / 25%);
+    padding: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #fff;
+    min-width: 150px;
+    max-width: 190px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transition: all 0.4s;
+}
+.dropdown-menu a{
+    display: block;
+    font-size: 16px;
+    font-family: var(--font-stack);
+    font-weight: 400;
+    color: var(--color);
+}
+/* .dropdown-menu a:hover{
+    color: var(--text-color);
+} */
+.dropdown:hover .dropdown-menu{
+    opacity: 1;
+    visibility: visible;
+}
+.btn{
+    align-items: center;
+    margin: 10px;
+    display: flex;
+}
+.btn a{
+    color: var(--white-color);
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fff;
+    font-family: var(--primary-font-stack);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.2em;
+    padding: 10px 20px;
+}
+.btn a:hover{
+    background-color: var(--primary-color);
+}
+/* banner */
+.bg{
+    position: absolute;
+}
+.banner{
+    margin-bottom: 100px;
+    background-image: url(../img/dark-industrial-living-room.jpg);
+    background-position: 50% 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: -91px;
+    width: 100%;
+    height: 700px;
+    z-index: 1;
+    position: relative;
+}
+.banner::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 700px;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.element{
+    width: 15%;
+    display: flex;
+    position: relative;
+    min-height: 1px;
+}
+.element .element-cat{
+    text-align: center;
+    background-color: #1E1C1F75;
+    padding: 1em 1em 1.5em 1em;
+    width: 100%;
+    position: relative;
+    height: 700px;
+}
+.element .element-cat .social-media{
+    padding-top: 640px;
+    position: relative;
+    color: var(--primary-color);
+}
+.element .element-cat .social-media::before{
+    margin-bottom: 40px;
+    background-color: var(--primary-color);
+    height: 1px;
+    content: '';
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    transition: all 0.3s;
+}
+.element .element-cat .social-media a i{
+    color: var(--primary-color);
+    margin: 5px;
+}
+.text{
+    margin: auto 0;
+    margin-left: -4em;
+    padding: 10px;
+    z-index: 1;
+}
+.text h1{
+    color: var(--white-color);
+    font-size: 68px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    line-height: 68px;
+    font-family: var(--primary-font-stack);
+    margin-bottom: 15px;
+}
+.text p{
+    color: var(--white-color);
+    font-family: var(--font-stack);
+    line-height: 24px;
+    margin-bottom: 15px;
+    letter-spacing: normal;
+}
+.text .btn a, .services-text .btn a, .insight .insight-cot .btn a, .letter .letter-cot .btn a{ 
+    color: var(--color);
+    background-color: var(--primary-color);
+    border-color: #000;
+    margin-left: -0.5em;
+}
+.text .btn a:hover, .services-text .btn a:hover, .insight .insight-cot .btn a:hover, .letter .letter-cot .btn a:hover{
+    background-color:var(--main-color) ;
+}
+/* about */
+.about{
+    margin-bottom: 96px;
+}
+.cot{
+    display: flex;
+    margin-bottom: 80px;
+}
+.cot .cot-1, .cot-2{
+    padding: 10px;
+    margin-right: 32px;
+}
+.cot .cot-1 h2, .work .cot-1{
+    color: var(--main-color);
+    font-family: var(--primary-font-stack);
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 46px;
+    position: relative;   
+    margin-top: 20px;
+}
+.cot .cot-1 h2::before, .work .cot-1 h2::before{
+    position: absolute;
+    content: '';
+    width: 75px;
+    background-color: var(--primary-color);
+    height: 4px;
+    top: -20px;
+    left: 0;
+}
+.cot .cot-1 p{
+    margin-top: 20px;
+    color: var(--main-color);
+    font-family: var(--font-stack);
+    font-size: 20px;
+    line-height: 30px;
+}
+.cot .cot-2 p, .cot .cot-2 .p1{
+    color: var(--color);
+    line-height: 24px;
+    margin-bottom: 14px;
+}
+.cot .cot-2 a img{
+    width: 50%;
+    cursor: pointer;
+}
+.cot .cot-2 h3{
+    color: var(--main-color);
+    font-family: var(--primary-font-stack);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+/* services */
+.services{
+    position: relative;
+}
+.services-text{
+    align-items: center;
+    z-index: 9;
+    margin-top: 120px;
+    padding: 42px 10px 10px 10px;
+    align-items: center;
+}
+.services-text h5, .reating-text h5, .counter-text h5, .letter .letter-cot h5{
+    color: var(--white-color);
+    font-family: var(--primary-font-stack);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.6px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+.services-text h2, .reating-text h2, .counter-text h2, .letter .letter-cot h2{
+    font-family: var(--primary-font-stack);
+    margin-bottom: 20px;
+    color: var(--white-color);
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 46px;
+}
+.services-text p, .reating-text p, .counter-text p, .letter .letter-cot p{
+    color: var(--white-color);
+    font-family: var(--font-stack);
+    line-height: 24px;
+}
+.services-box-container{
+    z-index: 9;
+    padding-top: 42px;
+    align-items: center;
+}
+.services-box-container .services-box{
+    margin: 10px;
+    padding: 35px;
+    background-color: var(--white-color);
+    box-shadow: 0px 30px 60px 0px rgb(0 0 0 / 15%);
+}
+.services-box-container .services-box a i{
+    margin-bottom: 20px;
+    font-size: 50px;
+    color: var(--primary-color);
+}
+.services-box-container .services-box h3{
+    margin-bottom: 16px;
+    color: #000;
+    font-size: 23px;
+    font-family: var(--primary-font-stack);
+    font-weight: 500;
+    line-height: 27.6px;
+    text-align: left;
+}
+.services-box-container .services-box p{
+    color: var(--text-color);
+    font-family: var(--font-stack);
+    line-height: 24px;
+}
+.services-bg{
+    background-image: url(../img/interior-of-spacious-kitchen-with-concrete-wall--e1675594967109.jpg);
+    background-position: 50% 65%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 700px;
+    width: 80%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.services-bg::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* reating */
+.reating{
+    padding-top: 224px;
+    padding-bottom: 112px;
+}
+.reating-text{
+    margin-right: 32px;
+    padding: 10px;
+    align-items: center;
+}
+.reating-text h5{
+    color: var(--main-color);
+}
+.reating-text h2{
+    color: var(--main-color);
+}
+.reating-text p{
+    color: var(--color);
+    padding-bottom: 20px;
+}
+  
+.skill-bars .bar {
+  margin: 20px 0;
+}
+
+.skill-bars .bar:first-child {
+  margin-top: 0px;
+}
+
+.skill-bars .bar .info {
+  margin-bottom: 5px;
+}
+
+.skill-bars .bar .info span {
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+
+@keyframes showText {
+  100% {
+    opacity: 1;
+  }
+}
+
+.skill-bars .bar .progress-line {
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05),
+    0 1px rgba(255, 255, 255, 0.8);
+  animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+@keyframes animate {
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.bar .progress-line span {
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: var(--primary-color);
+  animation: animate 1s 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+}
+
+.bar .progress-line.html span {
+  width: 90%;
+}
+
+.bar .progress-line.css span {
+  width: 75%;
+}
+
+.bar .progress-line.jquery span {
+  width: 84%;
+}
+
+.progress-line span::before {
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+.progress-line span::after {
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+
+@keyframes showText2 {
+  100% {
+    opacity: 1;
+  }
+}
+
+.progress-line.html span::after {
+  content: "90%";
+}
+
+.progress-line.css span::after {
+  content: "75%";
+}
+
+.progress-line.jquery span::after {
+  content: "84%";
+}
+.image{
+    background-image: url(../img/modern-industrial-interior.jpg);
+    box-shadow: 0px 5px 10px 0px rgb(0 0 0 / 25%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 420px;
+    padding: 16px 16px 16px 0px;
+    position: relative;
+}
+.backgroud-img{
+    background-color: transparent;
+    background-image: linear-gradient(90deg, #02010100 40%, #a1afb0 40%);   
+    position: absolute;
+    
+}
+.backgroud-img .paly-btn{
+    left: 10px;
+    bottom: 329px;
+    position: absolute;
+    z-index: 3;
+}
+.backgroud-img .paly-btn a{
+    width: 80px;
+    height: 80px;
+    line-height: 60px;
+    color: var(--main-color);
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+}
+.backgroud-img .paly-btn a:hover{
+    background-color: var(--color);
+    color: var(--text-color);
+}
+/* counat */
+.counter{
+    background-image: url(../img/living-room-in-industrial-style.jpg);
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 128px 16px 16px 16px ;
+    position: relative;
+    z-index: 1;
+}
+.counter::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+/* .counter-box{
+    text-align: center;
+} */
+.counter-text{
+    margin-bottom: 80px;
+    padding: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.counter-text h5, .letter .letter-cot h5{
+    color: var(--primary-color);
+}
+.counat{
+    width: 100%;
+    text-align: center;
+    background-color: var(--white-color);
+    box-shadow: 0px 30px 60px 0px rgb(0 0 0 / 15%);
+    display: flex;
+    margin-bottom: -80px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+}
+.counat .count {
+    color: var(--primary-color);
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-family: var(--primary-font-stack);
+}
+/* choose */
+.choose{
+    padding: 112px 16px 96px 16px;
+}
+.choose-img{
+    padding: 10px;
+    display: flex;
+}
+.choose-img .img-box{
+    margin-right: 10px;
+    align-items: center;
+}
+.choose-img .img-box1{
+    margin-left: 10px;
+}
+.choose-img .img-box1 .choose-cont{
+    margin-top: 20px;
+    padding: 20px;
+    border-style: solid;
+    border-width: 1px;
+}
+.choose-img .img-box1 .choose-cont .c-cont{
+    background-color: #f3f5f5;
+    text-align: center;
+    padding: 30px;
+}
+.choose-img .img-box1 .choose-cont .c-cont p{
+    font-family: var(--font-stack);
+    font-size: 20px;
+    color: var(--color);
+}
+.choose-img .img-box1 .choose-cont .c-cont h3{
+    margin-top: 40px;
+}
+.choose-img .choose-text{
+    padding: 10px;
+    margin-left: 32px;
+}
+.choose-img .choose-text h5{
+    color: var(--color);
+    font-family: var(--primary-font-stack);
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.choose-img .choose-text h2{
+    color: var(--main-color);
+    font-family: var(--primary-font-stack);
+    font-size: 42px;
+    font-weight: 500;
+    line-height: 42px;
+    margin-bottom: 15px;
+}
+.choose-img .choose-text p{
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24ox;
+    font-family: var(--font-stack);
+    margin-bottom: 30px;
+}
+.choose-img .choose-text .choose-icon{
+    display: flex;
+    margin: 15px;
+}
+.choose-img .choose-text .choose-icon i{
+    font-size: 35px;
+    margin-right: 20px;
+    color: var(--primary-color);
+}
+.choose-img .choose-text .choose-icon .icon-text h4{
+    font-family: var(--primary-font-stack);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.choose-img .choose-text .choose-icon .icon-text p{
+    font-size: 16px;
+    font-family: var(--font-stack);
+    font-weight: 400;
+    color: var(--color);
+
+}
+/* work  */
+.work{
+    padding-bottom: 112px;
+}
+.work .cot-1{
+    text-align: center;
+}
+.work .cot-1 h2{
+    font-size: 42px;
+    font-family: var(--primary-font-stack);
+    font-weight: 500;
+    line-height: 46px;
+    margin-bottom: 16px;
+}
+.work .cot-1 h2::before{
+    width: 10%;
+    top: -36%;
+    left: 43%;
+}
+.work .cot-1 p{
+    color: var(--color);
+    font-family: var(--font-stack);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.work .choose-text{
+    display: flex;
+    padding: 10px;
+}
+.work .choose-text .num{
+    padding: 0px 20px 0px 10px;
+}
+.work .choose-text .num h2{
+    color: #f3f5f5;
+    font-family: var(--primary-font-stack);
+    font-size: 68px;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+.work .choose-text .num-text h2{
+    color: var(--main-color);
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 30px;
+    font-family: var(--primary-font-stack);
+    margin-bottom: 10px;
+}
+.work .choose-text .num-text p{
+    color: var(--color);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-stack);
+    line-height: 24px;
+}
+/* review */
+.review .container{
+    background-image: url(../img/the-stylish-compostion-at-living-room-interior-with-copy-space-black-consola-.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 75%;
+    padding: 96px 48px 80px;
+    position: relative;
+    z-index: 1;
+}
+.review .container::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.review .review-cot{
+    display: flex;
+    justify-content: space-between;
+}
+.review .review-cot .review-text h2{
+    color: var(--white-color);
+    font-family: var(--primary-font-stack);
+    font-size: 42px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.review .review-cot .review-text p{
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-stack);
+    margin-bottom: 20px;
+}
+.review .review-cot .icon i{
+    color: var(--primary-color);
+    text-align: right;
+    font-size: 50px;
+}
+.review-item{
+    background-color: var(--white-color);
+    padding: 25px;
+}
+.review-item .name{
+    display: flex;
+}
+.r-img{
+    width: 55px;
+    height: 55px;
+    margin-right: 15px;
+}
+.review-item .con{
+    padding: 25px 25px 0 0;
+}
+/* project */
+.project{
+    padding: 96px 16px 112px 16px;
+}
+.project .project-text{
+    display: flex;
+}
+.project .project-text .project-hending{
+    padding: 10px;
+}
+.project .project-text .project-hending h5, .insight .insight-cot h5{
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: var(--primary-font-stack);
+    margin-bottom: 20px;
+}
+.project .project-text .project-hending h2, .insight .insight-cot h2{
+    color: var(--color);
+    font-size: 42px;
+    font-weight: 600;
+    font-family: var(--primary-font-stack);
+}
+.project .project-text p, .insight .insight-cot p{
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--font-stack);
+    line-height: 24px;
+    color: var(--text-color);
+}
+.project .project-img, .project .project-img1, .project .project-img2, .project .project-img3, .project .project-img4, .project .project-img5{
+    margin: 10px;
+    padding: 35px;
+    background-image: url(../img/blue-living-room.jpg);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    z-index: 1;
+}
+.project .project-img1{
+    background-image: url(../img/dark-industrial-living-room.jpg);
+}
+.project .project-img2{
+    background-image: url(../img/stylish-restaurant-interior-for-dinner-and-rest-with-great-cocktails.jpg);
+}
+.project .project-img3{
+    background-image: url(../img/interior-modern-open-space-office-3d-illustration.jpg);
+}
+.project .project-img4{
+    background-image: url(../img/room-design-in-industrial-style-e1675594918737.jpg);
+}
+.project .project-img5{
+    background-image: url(../img/half-landing-stairs-and-wooden-dining-area.jpg);
+}
+.project .project-img::after, .letter::after, .project .project-img1::after, .project .project-img2::after, .project .project-img3::after, .project .project-img4::after, .project .project-img5::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+.project .project-cot{
+    padding-top: 300px;
+}
+.project .project-cot h2{
+    color: var(--white-color);
+    font-family: var(--primary-font-stack);
+    font-size: 26px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.project .project-cot p{
+    color: var(--white-color);
+    font-family: var(--font-stack);
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+/* insight */
+.insight{
+    padding-bottom: 112px;
+}
+.insight .insight-cot{
+    padding: 10px;
+}
+.insight .insight-img{
+    box-shadow: 0px 2px 5px 0px rgb(0 0 0 / 15%);
+    margin: 10px;
+}
+.insight .insight-img .i-cot{
+    padding: 20px;
+}
+.insight .insight-img .i-cot h3{
+    margin-bottom: 7px;
+    color: var(--main-color);
+    font-family: var(--primary-font-stack);
+    font-size: 20px;
+    font-weight: 500;
+}
+.insight .insight-img .i-cot h6{
+    margin-bottom: 15px;
+    color: var(--color);
+    font-family: var(--font-stack);
+    font-size: 14px;
+    font-weight: 400;
+}
+.insight .insight-img .i-cot p{
+    margin-bottom: 10px;
+    color: var(--color);
+    font-family: var(--font-stack);
+    font-size: 16px;
+    font-weight: 400;
+}
+/* letter  */
+.letter{
+    background-image: url(../img/kitchen-with-industrial-dining-area.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 60%;
+    padding: 0px 16px 96px;
+    position: relative;
+    z-index: 1;
+}
+.letter .letter-cot{
+    background-color: #1E1C1FB3;
+    padding: 128px 48px 64px;
+}
+/* footer */
+.footer-bg{
+    background-image: url(../img/BG1-a-1-e1675595035234.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-position: center center;
+    position: relative;
+    z-index: 1;
+}
+.footer-bg::after{
+    position: absolute;
+    content: '';
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.9;
+    z-index: -1;
+}
+.footer-bg .footer-cot, .footer-bg .footer-cot1, .footer-bg .footer-cot2{
+    padding: 10px;
+    margin-right: 15px;
+}
+.footer-bg .footer-cot .logo1{
+    width: 35%;
+    margin-bottom: 20px;
+}
+.footer-bg .footer-cot p{
+    color: var(--white-color);
+    font-size: 15px;
+    font-weight: 400;
+    font-family: var(--font-stack);
+    margin-bottom: 20px;
+}
+.footer-bg .footer-cot ul, .footer-bg .footer-cot1 ul, .footer-bg .footer-cot2 ul{
+    padding: 0;
+}
+.footer-bg .footer-cot ul li a i{
+    padding-right: 10px;
+    padding-bottom: 10px;
+    color: var(--primary-color);
+}
+.footer-bg .footer-cot ul li a span{
+    color: var(--white-color);
+}
+.footer-bg .footer-cot1 h2, .footer-bg .footer-cot2 h2{
+    color: var(--white-color);
+    font-size: 20px;
+    font-family: var(--primary-font-stack);
+    font-weight: 500;
+    margin-bottom: 27px;
+}
+.footer-bg .footer-cot1 ul li i{
+    color: var(--primary-color);
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+.footer-bg .footer-cot1 ul li a{
+    color: var(--white-color);
+}
+.footer-bg .footer-cot2 ul{
+    display: flex;
+}
+.footer-bg .footer-cot2 ul li{
+    margin: 5px;
+    width: 70px;
+}
+
+/* // back to top */
+.progress-wrap {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+    display: block;
+    border-radius: 50px;
+    z-index: 100;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    transform: translateY(20px);
+    -webkit-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    transition: all 400ms linear;
+    mix-blend-mode: difference;
+  }
+  
+  .progress-wrap.active-progress {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+  .progress-wrap::after {
+    position: absolute;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f077';
+    text-align: center;
+    line-height: 44px;
+    font-size: 13px;
+    font-weight: 900;
+    color: #ccc;
+    left: 0;
+    top: 0;
+    height: 44px;
+    width: 44px;
+    cursor: pointer;
+    display: block;
+    z-index: 1;
+    -webkit-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    transition: all 400ms linear;
+  }
+  
+  .progress-wrap svg path {
+    fill: none;
+  }
+  
+  .progress-wrap svg.progress-circle path {
+    stroke: #ccc;
+    stroke-width: 3;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: all 400ms linear;
+    -o-transition: all 400ms linear;
+    transition: all 400ms linear;
+  }
